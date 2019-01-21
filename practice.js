@@ -2,6 +2,7 @@
   function buildQuiz() {
     // we'll need a place to store the HTML output
     const output = [];
+    const quizContainer = document.getElementById("quiz");
 
     // for each question...
     myQuestions.forEach((currentQuestion, questionNumber) => {
