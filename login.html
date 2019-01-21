@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<html style="height: 100%;">
+<head>
+<style>	
+
+body {
+  background-image: url("bg11.jpg");
+}   	
+.header {
+  background-color:  #cc0000;
+  padding: 20px;
+  text-align: center;
+}        
+</style>
+<br>
+</br>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="header">
+  <IMG SRC="logo.png" ALT="some text" WIDTH=700 HEIGHT=300>
+</div>
+<div class="container">
+  <div class="jumbotron">
+    <h1>LOG IN</h1>      
+    <p>log in to your EASY CHINRSE account</p>
+    <form method="POST">
+		<div class="content">
+		<div class="form-group">
+			<div class="row">
+				<div class="col-5">	
+					<label for="exampleInputEmail1">Username</label>
+					<input type="text" name="username" class="form-control" id="exampleInputEmail1" placeholder="Enter Username">
+					
+				</div>
+			</div>
+		<div class="row">
+			<div class="col-5">		
+				<div class="form-group">
+					<label for="exampleInputPassword1">Password</label>
+					<input type="password" name="password"class="form-control" id="exampleInputPassword1" placeholder="Password">
+				</div>
+			</div>
+		
+	</div>
+
+		</div>
+
+		<input type="submit" class="btn btn-primary" value="Log in">
+
+	</form>
+	<script src="{{ url_for('static', filename='jquery.js')}}"></script>  
+	<script src="{{ url_for('static', filename='bootstrap.bundle.js')}}"></script>
+	</div>
+  </div>
+       
+</div>
+	<!-- <h1 id="header"><font size=""><text align="center"><font color="white">Log in</h1></font></font></text>> -->
+	<!-- <form method="POST">
+		<div class="content">
+		<div class="form-group">
+			<div class="row">
+				<div class="col-5">	
+					<label for="exampleInputEmail1">Username</label>
+					<input type="text" name="username" class="form-control" id="exampleInputEmail1" placeholder="Enter Username">
+					
+				</div>
+			</div>
+		<div class="row">
+			<div class="col-5">		
+				<div class="form-group">
+					<label for="exampleInputPassword1">Password</label>
+					<input type="password" name="password"class="form-control" id="exampleInputPassword1" placeholder="Password">
+				</div>
+			</div>
+		
+	</div>
+
+		</div>
+
+		<input type="submit" class="btn btn-primary" value="Log in">
+
+	</form>
+	<script src="{{ url_for('static', filename='jquery.js')}}"></script>  
+	<script src="{{ url_for('static', filename='bootstrap.bundle.js')}}"></script>
+	</div> -->
+</body>
+
+
+</html>
+
