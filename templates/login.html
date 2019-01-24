@@ -5,7 +5,7 @@
 <style>	
 
 body {
-  background-image: url("bg11.jpg");
+  background-image: url("/static/img/bg11.jpg");
 }   	
 .header {
   background-color:  #cc0000;
@@ -25,7 +25,7 @@ body {
 </head>
 <body>
 <div class="header">
-  <IMG SRC="logo.png" ALT="some text" WIDTH=700 HEIGHT=300>
+  <IMG SRC="/static/img/logo.png" ALT="some text" WIDTH=700 HEIGHT=300>
 </div>
 <div class="container">
   <div class="jumbotron">
@@ -54,7 +54,7 @@ body {
 
 		</div>
 
-		<input type="submit" class="btn btn-primary" value="Log in">
+		<a href="{{ url_for('home') }}"><input type="submit" class="btn btn-primary" value="Log in"></a>
 
 	</form>
 	<script src="{{ url_for('static', filename='jquery.js')}}"></script>  
@@ -92,7 +92,7 @@ body {
 	<script src="{{ url_for('static', filename='jquery.js')}}"></script>  
 	<script src="{{ url_for('static', filename='bootstrap.bundle.js')}}"></script>
 	</div> -->
-<img src="flower.jpg" alt="Trulli" width="1300" height="400">	
+<img src="/static/img/flower.jpg" alt="Trulli" width="1300" height="400">	
 </body>
 
 

@@ -70,8 +70,8 @@ body {
 .button1 {font-size: 24px;}
 </style>	
 </head>
-<button class="button1">LOG IN</button>
-<button class="button1">SIGN UP</button>
+<a href="{{ url_for('log_in') }}"><button class="button1">LOG IN</button></a>
+<a href="{{ url_for('signup') }}"><button class="button1">SIGN UP</button></a>
 
 
 <div class="header">
@@ -79,10 +79,10 @@ body {
 </div>
 <div class="topnav">
 
-  <font size="4"><a href="#">GRAMMAR</a>
-  <a href="#">TEACHING VIDEOS</a>
-  <a href="#">QUIZ</a>
-  <a href="#"> KEY SENTENCES FOR BASIC CONVERSATION</a> 
+  <font size="4"><a href="{{ url_for('grammar') }}">GRAMMAR</a>
+  <a href="{{ url_for('videos') }}">TEACHING VIDEOS</a>
+  <a href="{{ url_for('quiz') }}">QUIZ</a>
+  <a href="{{ url_for('sentences') }}"> KEY SENTENCES FOR BASIC CONVERSATION</a> 
   </font>
 </div>
 

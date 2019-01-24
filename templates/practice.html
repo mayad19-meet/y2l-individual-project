@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body{
+
+
+
+
+  background-image: url("/static/img/bg11.jpg");
+  
+}
+
+ 
+.topnav {
+  overflow: hidden;
+  background-color: #800000;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ff9966;
+  color: black;
+  text-align: center;
+}
+
+.header {
+  background-color:  #cc0000;
+  padding: 20px;
+  text-align: center;
+  
+  font-color:white;
+
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #333;
+}
+.question{
+    font-weight: 600;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label{
+  display: block;
+}
+#submit{
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #279;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#submit:hover{
+    background-color: #38a;
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="header"> 
+  <IMG SRC="/static/img/logo.png" ALT="some text" WIDTH=700 HEIGHT=300></IMG>
+  <font size="8"><font color="black">Quiz</font></font>
+</div>
+<div class="topnav">
+  <a href="{{ url_for('grammar') }}">GRAMMAR</a>
+  <a href="{{ url_for('videos') }}">TEACHING VIDEOS</a>
+  <a href="{{ url_for('sentences') }}">KEY SENTENCES FOR BASIC CONVERSATION</a>
+  
+  <a href="{{ url_for('home') }}">HOME PAGE</a>
+</div>	
+<h1><font color="white"><font size="100"><u>Please choose the right translation to these sentences:</u></font></font></h1>
+<div id="quiz"></div>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+
+
+<script type="text/javascript" >
+
+	(function() {
+  function buildQuiz() {
+    // we'll need a place to store the HTML output
+    const output = [];
+
+    // for each question...
+    myQuestions.forEach((currentQuestion, questionNumber) => {
+      // we'll want to store the list of answer choices
+      const answers = [];
+
+      // and for each available answer...
+      for (letter in currentQuestion.answers) {
+        // ...add an HTML radio button
+        answers.push(
+          `<label>
+            <input type="radio" name="question${questionNumber}" value="${letter}">
+            ${letter} :
+            ${currentQuestion.answers[letter]}
+          </label>`
+        );
+      }
+
+      // add this question and its answers to the output
+      output.push(
+        `<div class="question"> ${currentQuestion.question} </div>
+        <div class="answers"> ${answers.join("")} </div>`
+      );
+    });
+
+    // finally combine our output list into one string of HTML and put it on the page
+    quizContainer.innerHTML = output.join("");
+  }
+
+  function showResults() {
+    // gather answer containers from our quiz
+    const answerContainers = quizContainer.querySelectorAll(".answers");
+
+    // keep track of user's answers
+    let numCorrect = 0;
+
+    // for each question...
+    myQuestions.forEach((currentQuestion, questionNumber) => {
+      // find selected answer
+      const answerContainer = answerContainers[questionNumber];
+      const selector = `input[name=question${questionNumber}]:checked`;
+      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+      // if answer is correct
+      if (userAnswer === currentQuestion.correctAnswer) {
+        // add to the number of correct answers
+        numCorrect++;
+
+        // color the answers green
+        answerContainers[questionNumber].style.color = "lightgreen";
+      } else {
+        // if answer is wrong or blank
+        // color the answers red
+        answerContainers[questionNumber].style.color = "red";
+      }
+    });
+
+    // show number of correct answers out of total
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+  }
+
+  const quizContainer = document.getElementById("quiz");
+  const resultsContainer = document.getElementById("results");
+  const submitButton = document.getElementById("submit");
+  const myQuestions = [
+    
+
+
+
+    {
+      question: "1.I am from China",
+      answers: {
+        a: "我中国人   (Wǒ zhōngguó rén)",
+        b: "我 是美国人   ( Wǒ shì měiguó rén)",
+        c: "我是中国人   (Wǒ shì zhōngguó rén)"
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "2.What date is your birthday?",
+      answers: {
+        a: "你的生日几月几号？ (Nǐ de shēngrì jǐ yuè jǐ hào?)  ",
+        b: "他的生日几月几号？(Tā de shēngrì jǐ yuè jǐ hào?)",
+        c: "他的生日几号？(Tā de shēngrì jǐ hào?)"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "3.Are you american?",
+      answers: {
+        a: "你是法国人吗？(Nǐ shì fàguó rén ma?)",
+        b: "你是德国人吗？(Nǐ shì déguó rén ma?)",
+        c: "你是美国吗？(Nǐ shì měiguó ma?)",
+        d: "你是美国人吗？(Nǐ shì měiguó rén ma?)"
+      },
+      correctAnswer: "d"
+    },
+    {
+    	question:"4.How old are you?",
+    	answers: {
+    		a: "你岁了？(Nǐ suìle?)",
+    		b: "你几高了？(Nǐ jǐ gāole?)",
+    		c: "你几岁了？(Nǐ jǐ suìle?)"
+    	},
+    	correctAnswer: "b"
+    },
+    {
+    	question:"5.How are you?",
+    	answers: {
+    		a: "你 有 吗？(Nǐ yǒu ma?)",
+    		b: "你 好 吗？？(Nǐ hǎo mǎ?)",
+    		c: "你 好 马？(Nǐ hǎo mǎ?)"
+    	},
+    	correctAnswer: "b"
+    },
+    {
+    	question:"6.How many people are in your family?",
+    	answers: {
+    		a: "你的家有几口人？(Nǐ de jiā yǒu jǐ kǒu rén?)",
+    		b: "你的家没有几口人？(Nǐ de jiā méiyǒu jǐ kǒu rén?)",
+    		c: "你的有几口人？(Nǐ de yǒu jǐ kǒu rén?)"
+    	},
+    	correctAnswer: "a"
+    },
+    {
+    	question:"7.Where is she?",
+    	answers: {
+    		a: "你 在那里？(Nǐ zài nàlǐ?)",
+    		b: "他 在那里？(Tā zài nàlǐ?)",
+    		c: "她 在那里？(Tā zài nàlǐ?)"
+    	},
+    	correctAnswer: "c"
+    },
+    {
+    	question:"8.My name is Maya",
+    	answers: {
+    		a: "我姓 maya(Wǒ xìng maya)",
+    		b: "我叫 maya(Wǒ jiào maya)",
+    		c: "我 maya (Wǒ maya)"
+    	},
+    	correctAnswer: "b"
+    },
+    {
+    	question:"9.My last name is Daniel",
+    	answers: {
+    		a: "我叫 maya(Wǒ xìng maya)",
+    		b: "我 daniel (Wǒ daniel)",
+    		c: "我 姓 daniel(Wǒ xìng daniel)"
+    	},
+    	correctAnswer: "c"
+    },
+    {
+    	question:"10.Sorry,my Chinese is not good",
+    	answers: {
+    		a: "对不起， 我 的中文不好(Duìbùqǐ, wǒ de zhōngwén bù hǎo)",
+    		b: "我 的中文不好(wǒ de zhōngwén bù hǎo)",
+    		c: "对不起(Duìbùqǐ)"
+    	},
+    	correctAnswer: "a"
+    }
+
+  ];
+
+  // display quiz right away
+  buildQuiz();
+
+  // on submit, show results
+  submitButton.addEventListener("click", showResults);
+})();
+</script>
+<img src="/static/img/flower.jpg" alt="Trulli" width="1300" height="400">
+
+</body>
+</html>

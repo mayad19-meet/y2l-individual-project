@@ -1,0 +1,397 @@
+<!doctype html> 
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+body {
+  background-image: url("/static/img/bg11.jpg");
+}   	
+.header {
+  background-color:  #cc0000;
+  padding: 20px;
+  text-align: center;
+}
+.topnav {
+  overflow: hidden;
+  background-color:#800000;
+  text-align: center;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ff9966;
+  color: black;
+  text-align: center;
+
+}	
+ *{
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+ }
+ @media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+} 
+</style>	
+</head>
+<!-- <div class="container">
+  <div class="jumbotron">
+     <background-color: #800000;>
+     <IMG SRC="logo.png" ALT="some text" WIDTH=700 HEIGHT=300> 
+     <br>
+     </br>    
+     <font size="6"><font color="black">BASIC SENTENCES IN CHINESE</font></font>
+  </div> -->
+<div class="header">
+  <IMG SRC="/static/img/logo.png" ALT="some text" WIDTH=700 HEIGHT=300>
+  <font size="6"><font color="black">BASIC SENTENCES IN CHINESE</font></font>
+</div>
+<div class="topnav">
+
+  <font size="4"><a href="{{ url_for('grammar') }}">GRAMMAR</a>
+  <a href="{{ url_for('videos') }}">TEACHING VIDEOS</a>
+  <a href="{{ url_for('quiz') }}">QUIZ</a>
+  <a href="{{ url_for('home') }}"> HOME PAGE</a> 
+  </font>
+</div>
+<h1><font color="white"><u>57 basic sentences in Chinese:</u></font></h1>
+<br>
+</br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3><font color="white">1.Nǐ hǎo</font></h3>
+      <h3><font color="white">你 好</font></h3>
+      
+      <h3><font color="white">Hello</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">4.Hěn hǎo</font></h3>
+      <h3><font color="white">很好</font></h3>
+      <h3><font color="white">good(I'm doing well)</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">7.Gōngzuò máng bù máng?</font></h3>
+      <h3><font color="white">工作忙 不忙?</font></h3>
+      <h3><font color="white">Is the work hard?</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">10.Nǐ jiào shénme míngzì?</font></h3>
+      <h3><font color="white">你叫 什么 名字?</font></h3>
+      <h3><font color="white">What is your first name?</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">13.Qǐngwèn, shéi shì wáng xiānshēng?</font></h3>
+      <h3><font color="white">请问，谁是王先生？</font></h3>
+      <h3><font color="white">Excuse me, who is Mr. Wang?</font></h3>
+      <br>
+        
+      </br>
+      <h3><font color="white">16.Wǒ jiào lǐ</font></h3>
+      <h3><font color="white">我 叫李</font></h3>
+      <h3><font color="white">My name is li</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">19.Duìbùqǐ</font></h3>
+      <h3><font color="white">对不起</font></h3>
+      <h3><font color="white">I'm sorry</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">22.Wǒ bù zhīdào</font></h3>
+      <h3><font color="white">我不知道</font></h3>
+      <h3><font color="white">I don't know</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">25.Tā shì shéi?</font></h3>
+      <h3><font color="white">他 是谁？</font></h3>
+      <h3><font color="white">Who is he?</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">28.Jīntiān jǐ yuè jǐ hào?</font></h3>
+      <h3><font color="white">今天几 月几 号？</font></h3>
+      <h3><font color="white">What date is it today?</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">31.Nǐ shì nà guórén?</font></h3>
+      <h3><font color="white">你是那国人？</font></h3>
+      <h3><font color="white">What country are you from?</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">34.Zàijiàn</font></h3>
+      <h3><font color="white">再见</font></h3>
+      <h3><font color="white">Goodbye</font></h3>
+       <br>
+      </br>
+      <h3><font color="white">37.Xǐshǒujiān zài nǎ?</font></h3>
+      <h3><font color="white">洗手间 在哪?</font></h3>
+      <h3><font color="white">Where is the bathroom?</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">40.Zěnme mǎi ne?</font></h3>
+      <h3><font color="white">怎么买呢？</font></h3>
+      <h3><font color="white">How much is this?</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">43.Lí zhè'er duō yuǎn ne?</font></h3>
+      <h3><font color="white">离 这儿多远 呢？</font></h3>
+      <h3><font color="white">How far is t from here?</font></h3>
+       <br>
+      </br>
+      <h3><font color="white">46.Fàguó</font></h3>
+      <h3><font color="white">法国</font></h3>
+      <h3><font color="white">Frannce</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">49.Yīngguó</font></h3>
+      <h3><font color="white">英国</font></h3>
+      <h3><font color="white">United Kingdom</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">52.Bālèsītǎn</font></h3>
+      <h3><font color="white">巴勒斯坦</font></h3>
+      <h3><font color="white">palestine</font></h3>    
+      <br>
+      </br>
+      <h3><font color="white">55.Qǐng nǐ zàishuō yībià</font></h3>
+      <h3><font color="white">请你再说一遍</font></h3>
+      <h3><font color="white">Please say it again</font></h3>
+
+    </div>
+    <div class="col-sm-4">
+      <h3><font color="white">2.Nǐ hǎo mǎ</font></h3>
+      <h3><font color="white">你 好 马?</font></h3>
+      <h3><font color="white">How are you?</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">5.Hái bùcuò</font></h3>
+      <h3><font color="white">还不错</font></h3>
+      <h3><font color="white">Not bad</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">8.Nín guìxìng?</font></h3>
+      <h3><font color="white">您贵姓?</font></h3>
+      <h3><font color="white">What is your name(to a respected person)</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">11.Nǐ xìng shénme?</font></h3>
+      <h3><font color="white">你 姓 什么?</font></h3>
+      <h3><font color="white">What is your last name?</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">14.Nǐ shì wáng xiānshēng ma?</font></h3>
+      <h3><font color="white">你是王先生吗?</font></h3>
+      <h3><font color="white">Are you Mr.Wang?</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">17.Xièxiè</font></h3>
+      <h3><font color="white">谢谢</font></h3>
+      <h3><font color="white">Thank you</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">20.Duìbùqǐ, wǒ de zhōngwén bù hǎo</font></h3>
+      <h3><font color="white">对不起， 我的中文不好</font></h3>
+      <h3><font color="white">Sorry, my Chinese is bad</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">23.Méiguānxì</font></h3>
+      <h3><font color="white">没 关系</font></h3>
+      <h3><font color="white">It's OK</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">26.Nǐ duōdàle?</font></h3>
+      <h3><font color="white">你多大了？</font></h3>
+      <h3><font color="white">How old are you?</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">29.Nǐ de shēngrì jǐ yuè jǐ hào?</font></h3>
+      <h3><font color="white">你的生日几 月几 号？</font></h3>
+      <h3><font color="white">What date is your birthday?</font></h3>
+       <br>
+      </br>
+      <h3><font color="white">32.Nǐ de jiā yǒu jǐ kǒu rén?</font></h3>
+      <h3><font color="white">你的家有几 口人？</font></h3>
+      <h3><font color="white">How many people are in your family?</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">35.Wǒ éle</font></h3>
+      <h3><font color="white">我俄 了</font></h3>
+      <h3><font color="white">I'm hungry</font></h3>
+       <br>
+      </br>
+      <h3><font color="white">38.Zhè shì shéile?</font></h3>
+      <h3><font color="white">这是谁 了？</font></h3>
+      <h3><font color="white">Who's is this?</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">41.Tài guìle</font></h3>
+      <h3><font color="white">太 贵 了</font></h3>
+      <h3><font color="white">That's too expnsive</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">44.Zhōngguó</font></h3>
+      <h3><font color="white">中国</font></h3>
+      <h3><font color="white">China</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">47.Déguó</font></h3>
+      <h3><font color="white">德国</font></h3>
+      <h3><font color="white">Germany</font></h3>
+      <br>
+      </br>
+      
+      <h3><font color="white">50.Yǐsèliè</font></h3>
+      <h3><font color="white">Yǐsèliè</font></h3>
+      <h3><font color="white">Israel</font></h3>
+      <!-- <h3><font color="white">49.Yīngguó</font></h3>
+      <h3><font color="white">英国</font></h3>
+      <h3><font color="white">United Kingdom</font></h3>
+      <!-- <br> -->
+      <!-- </br>
+      <h3><font color="white">51.Yǐsèliè</font></h3>
+      <h3><font color="white">Yǐsèliè</font></h3>
+      <h3><font color="white">Israel</font></h3> -->
+      <br>
+      </br>
+      <h3><font color="white">53.Yǒu wèntí ma?</font></h3>
+      <h3><font color="white">有 问题 吗？</font></h3>
+      <h3><font color="white">Any questions?</font></h3>    
+      <br>
+      </br>
+      <h3><font color="white">56.Wǒ huì shuō yīdiǎn ràng zhōngwén</font></h3>
+      <h3><font color="white">我会说一点让 中文</font></h3>
+      <h3><font color="white">I can speak a little Chinese</font></h3>
+
+
+    </div>
+    <div class="col-sm-4">
+      <h3><font color="white">3.Nǐ zěnme yàng?</font></h3>        
+      <h3><font color="white">你 怎么样？</font></h3>
+      <h3><font color="white">What's up?</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">6.Gōngzuò máng</font></h3>
+      <h3><font color="white">工作忙</font></h3>
+      <h3><font color="white">Hard work (busy at work)</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">9.Nǐ jiào shénme?</font></h3>
+      <h3><font color="white">你叫 什么?</font></h3>
+      <h3><font color="white">What is your name?</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">12.Qǐngwèn</font></h3>
+      <h3><font color="white">请问</font></h3>
+      <h3><font color="white">Excuse me</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">15.Wǒ xìng wáng</font></h3>
+      <h3><font color="white">我姓 王</font></h3>
+      <h3><font color="white">My last name is Wang</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">18.Bùyòng xiè</font></h3>
+      <h3><font color="white">不用谢</font></h3>
+      <h3><font color="white">You're welcome</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">21.Wǒ bù zhīdào nǐ shuō shénme</font></h3>
+      <h3><font color="white">我不知道你 说什么</font></h3>
+      <h3><font color="white">I don't know what you said.</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">24.Tā shì shéi?</font></h3>
+      <h3><font color="white">她 是谁？</font></h3>
+      <h3><font color="white">Who is she?</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">27.Wǒ (number) suìle</font></h3>
+      <h3><font color="white">我（number）岁了</font></h3>
+      <h3><font color="white">I'm (number) old</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">30.Wǒ de shēngrì (number) yuè (number) hào</font></h3>
+      <h3><font color="white">我的生日（number） 月（number） 号</font></h3>
+      <h3><font color="white">My birthday is (number of month)(number of day) </font></h3>
+       <br>
+      </br>
+      <h3><font color="white">33.Wǒ de jiā yǒu (number) kǒu rén?</font></h3>
+      <h3><font color="white">我的家有（number） 口人？</font></h3>
+      <h3><font color="white">My family has (number) people</font></h3>
+
+      <br>
+      </br>
+      <h3><font color="white">36.Nǐ xiǎng chī shénme?</font></h3>
+      <h3><font color="white">你想 吃什么？</font></h3>
+      <h3><font color="white">What do you want to eat?</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">39.Zhè shì wǒ de</font></h3>
+      <h3><font color="white">这是我的</font></h3>
+      <h3><font color="white">This is mine</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">42.Néng dǎzhé ma?</font></h3>
+      <h3><font color="white">能打折 吗？</font></h3>
+      <h3><font color="white">Can I have a discount?</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">45.Jiānádà</font></h3>
+      <h3><font color="white">加拿大</font></h3>
+      <h3><font color="white">Canada</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">48.Rìběn</font></h3>
+      <h3><font color="white">日 本</font></h3>
+      <h3><font color="white">Japan</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">51.Měiguó</font></h3>
+      <h3><font color="white">美国</font></h3>
+      <h3><font color="white">United States</font></h3>
+      <!-- <br>
+      </br>
+      <h3><font color="white">52.Bālèsītǎn</font></h3>
+      <h3><font color="white">巴勒斯坦</font></h3>
+      <h3><font color="white">palestine</font></h3>    
+ -->
+      <br>
+      </br>
+      <h3><font color="white">54.Zhège zì shì shénme yìsi?</font></h3>
+      <h3><font color="white">这个字是什么意思？</font></h3>
+      <h3><font color="white">What does this word mean?</font></h3>
+      <br>
+      </br>
+      <h3><font color="white">57.Nǐ huì shuō yīngyǔ ma?</font></h3>
+      <h3><font color="white">你会说英语吗？</font></h3>
+      <h3><font color="white">Can you speak English?</font></h3>
+
+    </div>
+  </div>
+</div>
+
+<img src="/static/img/flower.jpg" alt="Trulli" width="1300" height="400">
+</body>
+</html>

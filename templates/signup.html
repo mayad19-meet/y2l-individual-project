@@ -5,7 +5,7 @@
 <style> 
 
 body {
-  background-image: url("bg11.jpg");
+  background-image: url("/static/img/bg11.jpg");
 }     
 .header {
   background-color:  #cc0000;
@@ -60,7 +60,7 @@ body {
        
             
           </div>
-          <button class="btn btn-primary" style="margin-top: 10px;"type="submit">Submit form</button>
+          <a href="{{ url_for('log_in') }}"><button class="btn btn-primary" style="margin-top: 10px;"type="submit">Submit form</button></a>
           <src class="centerningimg" img="background.jpg">
         </div>
       </div>
@@ -112,7 +112,7 @@ body {
 
       <script src="{{ url_for('static', filename='jquery.js')}}"></script>
       <script src="{{ url_for('static', filename='bootstrap.bundle.js')}}"></script>
-<img src="flower.jpg" alt="Trulli" width="1300" height="400">      
+<img src="/static/img/flower.jpg" alt="Trulli" width="1300" height="400">      
 </body>
 
 </html>
