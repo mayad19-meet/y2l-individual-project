@@ -32,7 +32,7 @@ body {
 
     <h1>LOG IN</h1>      
     <p>log in to your EASY CHINESE account</p>
-    <form method="POST">
+    <form method="POST" action="/log_in">
 		<div class="content" >
 		<div class="form-group">
 			<div class="row">
@@ -54,9 +54,14 @@ body {
 
 		</div>
 
-<a href="{{ url_for('home') }}"><input type="submit" class="btn btn-primary" value="Log in"></a>
+		<input type="submit" class="btn btn-primary" value="Log in">
+		
 
 	</form>
+	<p> Not signed up yet?! Click sign up!</p> 
+	<h4><a href="/signup">Sign Up</a> </h4>
+
+
 	<script src="{{ url_for('static', filename='jquery.js')}}"></script>  
 	<script src="{{ url_for('static', filename='bootstrap.bundle.js')}}"></script>
 	</div>

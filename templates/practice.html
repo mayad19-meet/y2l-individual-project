@@ -71,6 +71,14 @@ body{
     background-color: #38a;
 }
 
+.question {
+  color: white;
+}
+
+.answers {
+  color: white;
+}
+
 
 
 </style>
@@ -88,10 +96,10 @@ body{
   <a href="{{ url_for('home') }}">HOME PAGE</a>
 </div>	
 <h1><font color="white"><font size="100"><u>Please choose the right translation to these sentences:</u></font></font></h1>
-<div id="quiz"></div>
+<div id="quiz" style="font-color:"white";"></div>
 <button id="submit">Submit Quiz</button>
 <div id="results"></div>
-
+<div>
 <script type="text/javascript" >
 
 	(function() {
@@ -118,7 +126,7 @@ body{
 
       // add this question and its answers to the output
       output.push(
-        `<div class="question"> ${currentQuestion.question} </div>
+        `<div class="question" style="color=white;"> ${currentQuestion.question} </div>
         <div class="answers"> ${answers.join("")} </div>`
       );
     });
