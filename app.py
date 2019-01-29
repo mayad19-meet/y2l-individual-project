@@ -55,7 +55,7 @@ def signup():
 
         database.add_account(first_name,last_name,username,password)
 
-        return "You have signed up"
+        return "You have signed up!! Now go back and click the log in button!"
 
 
 if __name__ == '__main__':
